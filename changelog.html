@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Changelog · PrivateForge</title>
+  <meta name="description" content="Every PrivateForge release, documented. v1.0 launched Apr 26, 2026 — multi-tenant orgs, BYOK, billing, browser + sandbox runtimes." />
+  <link rel="canonical" href="https://www.privateforge.ai/changelog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Changelog · PrivateForge" />
+  <meta property="og:description" content="Every PrivateForge release, documented. v1.0 launched Apr 26, 2026 — multi-tenant orgs, BYOK, billing, browser + sandbox runtimes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.privateforge.ai/changelog.html" />
+  <meta property="og:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
+  <meta property="og:site_name" content="PrivateForge" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Changelog · PrivateForge" />
+  <meta name="twitter:description" content="Every PrivateForge release, documented. v1.0 launched Apr 26, 2026 — multi-tenant orgs, BYOK, billing, browser + sandbox runtimes." />
+  <meta name="twitter:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
+
+  <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)" />
+
+  <!-- Favicon (inline SVG as data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'>
+ <rect width='64' height='64' rx='14' fill='%230b0a10'/>
+ <rect x='14' y='46' width='36' height='6' rx='1' fill='%23ff6b35' opacity='0.85'/>
+ <path d='M18 38 L46 38 L42 46 L22 46 Z' fill='%23ff6b35' opacity='0.65'/>
+ <path d='M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z' fill='%23ff6b35'/>
+ <path d='M32 8 L38 22 L32 18 L26 22 Z' fill='%23ffb347' opacity='0.95'/>
+ <circle cx='20' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
+ <circle cx='44' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
+</svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Anti-FOUC theme set -->
+  <script>(function(){var t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap-xl nav">
+      <a class="brand" href="index.html" aria-label="PrivateForge home">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
+  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
+  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
+  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
+  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
+  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+</svg>
+        <span class="word">PrivateForge</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="changelog.html" aria-current="page">Changelog</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a class="btn btn-secondary btn-sm" href="https://app.privateforge.ai/#/login">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
+        <button class="nav-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" data-mobile-menu data-open="false">
+      <ul>
+        <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="changelog.html" aria-current="page">Changelog</a></li>
+        <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a class="btn btn-primary" href="https://app.privateforge.ai/#/signup">Start free trial</a>
+      </div>
+    </div>
+  </header>
+
+<main>
+    <section class="page-head">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="wrap">
+        <span class="eyebrow"><span class="dot"></span> Changelog</span>
+        <h1>What we've <span class="accent">shipped.</span></h1>
+        <p class="lede">Every release is documented here. Latest on top. We aim for one focused release every 1–2 weeks.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-default">
+
+        <article class="changelog-entry reveal">
+          <div class="meta">
+            <span class="version">v1.0</span>
+            <span class="date">Apr 26 · 2026</span>
+            <div>
+              <span class="tag added">Launch</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Initial SaaS launch.</h3>
+            <p>PrivateForge v1.0 — the first public release. The full self-hosted agent platform with multi-tenant orgs, BYOK provider routing, billing, and the browser + sandbox runtimes.</p>
+            <ul>
+              <li><strong>Multi-tenant orgs.</strong> Real org/team/workspace primitives. Roles: owner, admin, member, viewer. Magic-link sign-in.</li>
+              <li><strong>BYOK provider routing.</strong> Per-org keys for Anthropic, OpenAI, and Google — encrypted with AWS KMS envelope encryption. Calls go direct to the provider.</li>
+              <li><strong>Billing & subscriptions.</strong> Stripe-backed billing, prorated upgrades, 7-day trial on every plan, per-user seat add-ons.</li>
+              <li><strong>Browser runtime.</strong> Stagehand + Browserbase wired in. Agent can navigate, fill forms, and produce screenshot artifacts.</li>
+              <li><strong>Code sandbox.</strong> E2B integration for isolated cloud micro-VMs — for risky tool calls and untrusted scripts.</li>
+              <li><strong>Project memory.</strong> Per-project semantic memory. The agent remembers conventions and preferences across sessions.</li>
+              <li><strong>History timeline.</strong> Searchable record of every action, plan, and tool call. Replayable runs.</li>
+              <li><strong>Cost dashboard.</strong> Per-user, per-project, per-provider call accounting.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="changelog-entry reveal">
+          <div class="meta">
+            <span class="version">v0.9</span>
+            <span class="date">Apr 12 · 2026</span>
+            <div>
+              <span class="tag improved">Beta</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Closed beta — last polish before GA.</h3>
+            <p>Two weeks of dogfooding across our 14 design-partner teams. Bug fixes, performance work, and the final pricing model.</p>
+            <ul>
+              <li>Hardened the KMS decryption path; secrets now decrypt only at agent runtime, never on our servers.</li>
+              <li>Browser agent now resumes mid-step on flaky network — fixed long-tail failures on slow staging environments.</li>
+              <li>Memory writes batched — 4× fewer disk syncs during long agent runs.</li>
+              <li>Pricing finalized: $20 single, $50 team (5 users), $10/extra user.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="changelog-entry reveal">
+          <div class="meta">
+            <span class="version">v0.5</span>
+            <span class="date">Mar 15 · 2026</span>
+            <div>
+              <span class="tag security">Security</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Private alpha.</h3>
+            <p>First version handed to design partners. The architecture solidified here — agent runtime as a binary, control plane as a thin SaaS, BYOK with KMS envelope encryption.</p>
+            <ul>
+              <li>Initial multi-provider routing (Anthropic, OpenAI).</li>
+              <li>Filesystem and shell tools.</li>
+              <li>Basic project memory.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-strip reveal">
+          <h2>Follow what we <span class="accent">ship next.</span></h2>
+          <p>SSO, SOC 2 Type I, and a deeper org dashboard are next on the road.</p>
+          <div class="actions">
+            <a class="btn btn-primary btn-lg" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
+            <a class="btn btn-ghost btn-lg" href="https://github.com/kunalpatel90/privateforge-app">Watch on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="wrap-xl">
+      <div class="footer-grid">
+        <div class="col footer-brand">
+          <a class="brand" href="index.html" aria-label="PrivateForge home">
+            <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
+  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
+  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
+  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
+  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
+  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+</svg>
+            <span class="word">PrivateForge</span>
+          </a>
+          <p class="tagline">Privacy-first, self-hosted AI agents. Your keys. Your data. Your machine.</p>
+        </div>
+        <div class="col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://github.com/kunalpatel90/privateforge-app">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Get started</h4>
+          <ul>
+            <li><a href="https://app.privateforge.ai/#/signup">Start free trial</a></li>
+            <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> PrivateForge, Inc.</span>
+        <div class="meta">
+          <span>Built for private workflows.</span>
+          <a href="security.html">Privacy & security</a>
+          <a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

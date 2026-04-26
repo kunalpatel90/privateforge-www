@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrivateForge · Self-hosted AI agents you actually control</title>
+  <meta name="description" content="Privacy-first, self-hosted AI agent platform. Coding agent, browser automation, and sandboxes — running on your hardware, with your API keys. BYOK, KMS-encrypted, team-ready." />
+  <link rel="canonical" href="https://www.privateforge.ai/index.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PrivateForge · Self-hosted AI agents you actually control" />
+  <meta property="og:description" content="Privacy-first, self-hosted AI agent platform. Coding agent, browser automation, and sandboxes — running on your hardware, with your API keys. BYOK, KMS-encrypted, team-ready." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.privateforge.ai/index.html" />
+  <meta property="og:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
+  <meta property="og:site_name" content="PrivateForge" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PrivateForge · Self-hosted AI agents you actually control" />
+  <meta name="twitter:description" content="Privacy-first, self-hosted AI agent platform. Coding agent, browser automation, and sandboxes — running on your hardware, with your API keys. BYOK, KMS-encrypted, team-ready." />
+  <meta name="twitter:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
+
+  <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)" />
+
+  <!-- Favicon (inline SVG as data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'>
+ <rect width='64' height='64' rx='14' fill='%230b0a10'/>
+ <rect x='14' y='46' width='36' height='6' rx='1' fill='%23ff6b35' opacity='0.85'/>
+ <path d='M18 38 L46 38 L42 46 L22 46 Z' fill='%23ff6b35' opacity='0.65'/>
+ <path d='M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z' fill='%23ff6b35'/>
+ <path d='M32 8 L38 22 L32 18 L26 22 Z' fill='%23ffb347' opacity='0.95'/>
+ <circle cx='20' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
+ <circle cx='44' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
+</svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Anti-FOUC theme set -->
+  <script>(function(){var t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap-xl nav">
+      <a class="brand" href="index.html" aria-label="PrivateForge home">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
+  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
+  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
+  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
+  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
+  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+</svg>
+        <span class="word">PrivateForge</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a class="btn btn-secondary btn-sm" href="https://app.privateforge.ai/#/login">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
+        <button class="nav-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" data-mobile-menu data-open="false">
+      <ul>
+        <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a class="btn btn-primary" href="https://app.privateforge.ai/#/signup">Start free trial</a>
+      </div>
+    </div>
+  </header>
+
+<main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="wrap-xl hero-content">
+        <span class="eyebrow hero-eyebrow"><span class="dot"></span> Self-hosted AI agents · v1.0 launching tonight</span>
+        <h1>
+          Forge your own <br/>
+          <span class="accent">private AI workspace.</span>
+        </h1>
+        <p class="hero-sub">
+          PrivateForge runs a Claude-Code-class agent on your laptop, your office server, or your VPC. Your code, your secrets, and your prompts never leave machines you control. Bring your own API keys — we don't proxy, we don't train, we don't see.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
+          <a class="btn btn-ghost btn-lg" href="features.html">See what it does</a>
+        </div>
+        <div class="hero-meta">
+          <span class="check">7-day free trial</span>
+          <span class="check">No credit card required</span>
+          <span class="check">BYOK · Anthropic, OpenAI, Google</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo cloud / social proof placeholder -->
+    <section class="section-tight">
+      <div class="wrap">
+        <div class="strike-divider">
+          Trusted by builders who refuse to upload their codebase
+          <span class="marks"><span></span><span></span><span></span></span>
+        </div>
+        <div class="logo-cloud reveal">
+          <span>Stripe alumni</span>
+          <span>Vercel teams</span>
+          <span>Linear customers</span>
+          <span>Indie hackers</span>
+          <span>Series-A startups</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> The problem</span>
+          <h2>Every AI tool you use is a one-way mirror.</h2>
+          <p class="lede">
+            Cursor, Replit, v0, ChatGPT — they all want your code uploaded, your prompts logged, and your context routed through their servers. For a side project that's fine. For your <em>actual</em> work, it's a privacy and compliance nightmare. And for a <em>regulated</em> codebase, it's a non-starter.
+          </p>
+        </div>
+
+        <div class="feature-grid reveal">
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg>
+            </div>
+            <h3>Your code goes up.</h3>
+            <p>Every file you open in a SaaS agent gets shipped to someone else's GPUs. Even with “zero retention” promises, your secrets cross the network.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a4 4 0 0 0-4 4v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/></svg>
+            </div>
+            <h3>Their key, their rules.</h3>
+            <p>Most agents proxy LLM calls through their own infrastructure. They set the model, the rate limits, and — quietly — the training policy.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </div>
+            <h3>No team boundaries.</h3>
+            <p>"Add three teammates" on most agentic tools means giving everyone the same anonymous bag of context. No roles. No audit. No org structure.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+            </div>
+            <h3>Compliance limbo.</h3>
+            <p>Your security team asks "where does the data go?" You can't answer. Procurement freezes. The deal slips. You build with ChatGPT after hours.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anvil section divider -->
+    <section style="position:relative;padding-block:0;">
+      <div class="wrap-xl reveal" style="padding-block: clamp(2rem, 4vw, 4rem);">
+        <div style="border-radius: var(--radius-2xl); overflow: hidden; aspect-ratio: 21/9; position: relative; border: 1px solid var(--color-border);">
+          <img src="images/section-anvil.webp" alt="Sparks raining onto an iron anvil — the PrivateForge motif" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(11,10,16,0.95) 0%, rgba(11,10,16,0.4) 50%, transparent 100%);"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;padding:clamp(1.5rem,5vw,3.5rem);">
+            <div style="max-width: 560px;">
+              <div class="eyebrow" style="margin-bottom: var(--space-4); background: rgba(0,0,0,0.4); border-color: rgba(255,107,53,0.5);"><span class="dot"></span> The PrivateForge approach</div>
+              <h2 style="font-size: var(--text-2xl); letter-spacing: -0.025em; color: #fff; margin-bottom: var(--space-3);">
+                Pull the AI <em style="color: var(--color-primary); font-style: italic;">to</em> your data — not your data to the AI.
+              </h2>
+              <p style="color: rgba(236,235,243,0.85); max-width: 52ch;">
+                The agent runs as a binary you install. Your filesystem, your network, your KMS. Provider keys are encrypted at rest with your own AWS KMS — and never decrypted server-side.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow ghost">How it works</span>
+          <h2>From `git clone` to shipping in 4 minutes.</h2>
+          <p class="lede">No infra to set up. No models to download. Install, sign in, paste an API key — and your private agent is ready.</p>
+        </div>
+        <div class="steps reveal">
+          <div class="step">
+            <h3>Install the binary</h3>
+            <p>One command on your laptop or on a VPC instance you already own. The agent runs locally.</p>
+          </div>
+          <div class="step">
+            <h3>Add your API keys</h3>
+            <p>Anthropic, OpenAI, Google — bring any combination. Encrypted at rest with your KMS.</p>
+          </div>
+          <div class="step">
+            <h3>Open a project</h3>
+            <p>Point at any folder. The agent gets a workstation: shell, files, browser, sandbox.</p>
+          </div>
+          <div class="step">
+            <h3>Forge.</h3>
+            <p>Plan, edit, run, deploy. Memory persists. History is searchable. Costs are visible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features grid -->
+    <section class="section" id="features-preview">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span> What's in the workshop</span>
+          <h2>A full agentic stack — without the SaaS dependency.</h2>
+          <p class="lede">Everything Cursor, Replit, and v0 ship. Plus the parts they leave out: org structure, encryption-at-rest with your keys, and full observability.</p>
+        </div>
+
+        <div class="feature-grid-2 reveal">
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Coding workstation</h3>
+            <p>File system access, shell, terminal, project memory, plan→execute loops, multi-file edits. Same agent shape as Claude Code, with the data path inverted.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            </div>
+            <h3>Browser automation</h3>
+            <p>Stagehand + Browserbase wired in. The agent reads docs, files tickets, and tests your app in a real Chromium — without you wiring Playwright by hand.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Code sandboxes (E2B)</h3>
+            <p>Spin up isolated cloud micro-VMs for risky operations — package installs, schema migrations, untrusted scripts — without polluting your machine.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>BYOK across providers</h3>
+            <p>Per-org keys for Anthropic, OpenAI, and Google. Mix models in a single project. Costs are tracked per call, per user, per provider.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M2 22a10 10 0 0 1 20 0"/></svg>
+            </div>
+            <h3>Org · team · workspace</h3>
+            <p>Real role-based access — owner, admin, member, viewer. Shared workspaces for the team. Private playgrounds for each user. No more shared logins.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>KMS-encrypted secrets</h3>
+            <p>AWS KMS envelope encryption for every API key, token, and secret. Your KMS, your CMK, your audit log.</p>
+          </article>
+        </div>
+
+        <div style="margin-top: var(--space-10); display: flex; justify-content: center;" class="reveal">
+          <a class="btn btn-ghost btn-lg" href="features.html">Tour every feature <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow ghost">Why PrivateForge</span>
+          <h2>A serious tool, for serious operators.</h2>
+        </div>
+        <div class="feature-grid-3 reveal">
+          <article class="card">
+            <h3>vs. Cursor / Replit / v0</h3>
+            <p class="muted">Same agent power. Your keys, your data, your machine — never theirs. Plus real team primitives.</p>
+          </article>
+          <article class="card">
+            <h3>vs. ChatGPT Enterprise</h3>
+            <p class="muted">Actually agentic — writes code, runs browsers, edits files, deploys apps. Not a chat box dressed up with retrieval.</p>
+          </article>
+          <article class="card">
+            <h3>vs. self-rolled (LangChain)</h3>
+            <p class="muted">Production-ready on day one. Evals, history, costs, org model — the parts you spend three quarters building.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing teaser -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span> Pricing</span>
+          <h2>Honest pricing. No tokens to think about.</h2>
+          <p class="lede">A flat monthly subscription for the platform. Bring your own LLM keys — pay providers directly, see every cost.</p>
+        </div>
+        <div class="pricing-grid reveal">
+          <article class="price-card">
+            <div class="plan">Single User</div>
+            <div class="price"><span class="currency">$</span>20<span class="period">/month</span></div>
+            <p class="summary">For solo developers running PrivateForge on their own machine.</p>
+            <ul>
+              <li>1 user · local PC hosting</li>
+              <li>Projects, memory, history</li>
+              <li>Browser agent + sandbox</li>
+              <li>Multi-provider BYOK</li>
+            </ul>
+            <a class="btn btn-secondary" href="https://app.privateforge.ai/#/signup">Start free trial</a>
+          </article>
+          <article class="price-card featured">
+            <div class="plan">Team</div>
+            <div class="price"><span class="currency">$</span>50<span class="period">/month</span></div>
+            <p class="summary">Up to 5 users on a shared self-hosted workspace.</p>
+            <ul>
+              <li>Up to 5 users</li>
+              <li>Shared workspace</li>
+              <li>Private user accounts</li>
+              <li>Memory, history, audit</li>
+            </ul>
+            <a class="btn btn-primary" href="https://app.privateforge.ai/#/signup">Start free trial</a>
+          </article>
+          <article class="price-card">
+            <div class="plan">Extra User</div>
+            <div class="price"><span class="currency">$</span>10<span class="period">/user/mo</span></div>
+            <p class="summary">For teams above 5 users — add seats one at a time.</p>
+            <ul>
+              <li>Pay per additional seat</li>
+              <li>Same private workspace</li>
+              <li>Same role-based access</li>
+              <li>Volume discounts on request</li>
+            </ul>
+            <a class="btn btn-secondary" href="pricing.html">See full pricing</a>
+          </article>
+        </div>
+        <p style="text-align: center; margin-top: var(--space-8); color: var(--color-text-muted); font-size: var(--text-sm);" class="reveal">
+          7-day free trial on all plans. No credit card required to start. <a href="pricing.html" style="color: var(--color-primary);">See feature comparison →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-strip reveal">
+          <h2>Ready to <span class="accent">forge</span> something private?</h2>
+          <p>Spin up your workspace in 4 minutes. Bring your own keys. Keep every byte under your roof.</p>
+          <div class="actions">
+            <a class="btn btn-primary btn-lg" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
+            <a class="btn btn-ghost btn-lg" href="security.html">Read the privacy model</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="wrap-xl">
+      <div class="footer-grid">
+        <div class="col footer-brand">
+          <a class="brand" href="index.html" aria-label="PrivateForge home">
+            <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
+  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
+  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
+  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
+  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
+  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+</svg>
+            <span class="word">PrivateForge</span>
+          </a>
+          <p class="tagline">Privacy-first, self-hosted AI agents. Your keys. Your data. Your machine.</p>
+        </div>
+        <div class="col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://github.com/kunalpatel90/privateforge-app">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Get started</h4>
+          <ul>
+            <li><a href="https://app.privateforge.ai/#/signup">Start free trial</a></li>
+            <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> PrivateForge, Inc.</span>
+        <div class="meta">
+          <span>Built for private workflows.</span>
+          <a href="security.html">Privacy & security</a>
+          <a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

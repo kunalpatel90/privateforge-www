@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Docs · PrivateForge</title>
+  <meta name="description" content="Quickstart guide for PrivateForge: sign up, install the agent, add an API key, run your first project. Reference docs and CLI reference live on GitHub." />
+  <link rel="canonical" href="https://www.privateforge.ai/docs.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Docs · PrivateForge" />
+  <meta property="og:description" content="Quickstart guide for PrivateForge: sign up, install the agent, add an API key, run your first project. Reference docs and CLI reference live on GitHub." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.privateforge.ai/docs.html" />
+  <meta property="og:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
+  <meta property="og:site_name" content="PrivateForge" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Docs · PrivateForge" />
+  <meta name="twitter:description" content="Quickstart guide for PrivateForge: sign up, install the agent, add an API key, run your first project. Reference docs and CLI reference live on GitHub." />
+  <meta name="twitter:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
+
+  <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)" />
+
+  <!-- Favicon (inline SVG as data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'>
+ <rect width='64' height='64' rx='14' fill='%230b0a10'/>
+ <rect x='14' y='46' width='36' height='6' rx='1' fill='%23ff6b35' opacity='0.85'/>
+ <path d='M18 38 L46 38 L42 46 L22 46 Z' fill='%23ff6b35' opacity='0.65'/>
+ <path d='M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z' fill='%23ff6b35'/>
+ <path d='M32 8 L38 22 L32 18 L26 22 Z' fill='%23ffb347' opacity='0.95'/>
+ <circle cx='20' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
+ <circle cx='44' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
+</svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Anti-FOUC theme set -->
+  <script>(function(){var t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap-xl nav">
+      <a class="brand" href="index.html" aria-label="PrivateForge home">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
+  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
+  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
+  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
+  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
+  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+</svg>
+        <span class="word">PrivateForge</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="docs.html" aria-current="page">Docs</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a class="btn btn-secondary btn-sm" href="https://app.privateforge.ai/#/login">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
+        <button class="nav-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" data-mobile-menu data-open="false">
+      <ul>
+        <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="docs.html" aria-current="page">Docs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a class="btn btn-primary" href="https://app.privateforge.ai/#/signup">Start free trial</a>
+      </div>
+    </div>
+  </header>
+
+<main>
+    <section class="page-head">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="wrap">
+        <span class="eyebrow"><span class="dot"></span> Documentation</span>
+        <h1>Docs are <span class="accent">on the way.</span></h1>
+        <p class="lede">We're shipping the formal documentation site alongside our public v1.1 release. In the meantime, the four-step quickstart below covers everything you need to be productive in your first hour.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow ghost">Quickstart · 4 steps</span>
+          <h2>From signup to first project.</h2>
+        </div>
+        <div class="quick-grid reveal">
+          <article class="quick-card">
+            <span class="step-num">01</span>
+            <h3>Sign up</h3>
+            <p>Create your org and your first user at <a href="https://app.privateforge.ai/#/signup" style="color: var(--color-primary);">app.privateforge.ai</a>. Email + magic link. No credit card.</p>
+          </article>
+          <article class="quick-card">
+            <span class="step-num">02</span>
+            <h3>Install the agent</h3>
+            <p>Run <span class="kbd">curl -fsSL get.privateforge.ai | sh</span> on your laptop. macOS and Linux supported; Windows via WSL.</p>
+          </article>
+          <article class="quick-card">
+            <span class="step-num">03</span>
+            <h3>Add an API key</h3>
+            <p>Paste an Anthropic, OpenAI, or Google key in Settings → Providers. Encrypted at rest with KMS — never proxied.</p>
+          </article>
+          <article class="quick-card">
+            <span class="step-num">04</span>
+            <h3>Run your first project</h3>
+            <p>Point the agent at a folder. Ask it to fix a failing test, or write a new feature. Watch it plan, edit, run.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow ghost">Reference</span>
+          <h2>Where to look while we polish the docs.</h2>
+        </div>
+        <div class="feature-grid-3 reveal">
+          <article class="card">
+            <h3>GitHub</h3>
+            <p>Issues, examples, configuration recipes, and the agent's CLI reference live alongside the source.</p>
+            <p style="margin-top: var(--space-3);"><a class="btn-link" href="https://github.com/kunalpatel90/privateforge-app">Browse the repo <span class="btn-arrow">→</span></a></p>
+          </article>
+          <article class="card">
+            <h3>Changelog</h3>
+            <p>Every release ships with a structured changelog: added / changed / fixed / security. No marketing fluff.</p>
+            <p style="margin-top: var(--space-3);"><a class="btn-link" href="changelog.html">Latest releases <span class="btn-arrow">→</span></a></p>
+          </article>
+          <article class="card">
+            <h3>Security model</h3>
+            <p>The privacy and security architecture, in detail. Useful for security reviews and compliance questionnaires.</p>
+            <p style="margin-top: var(--space-3);"><a class="btn-link" href="security.html">Read the model <span class="btn-arrow">→</span></a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-strip reveal">
+          <h2>Need a hand getting set up?</h2>
+          <p>We're a small team and we read every email. Genuinely.</p>
+          <div class="actions">
+            <a class="btn btn-primary btn-lg" href="mailto:hello@privateforge.ai?subject=Help%20getting%20started">Email us</a>
+            <a class="btn btn-ghost btn-lg" href="https://app.privateforge.ai/#/signup">Start free trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="wrap-xl">
+      <div class="footer-grid">
+        <div class="col footer-brand">
+          <a class="brand" href="index.html" aria-label="PrivateForge home">
+            <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
+  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
+  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
+  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
+  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
+  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
+</svg>
+            <span class="word">PrivateForge</span>
+          </a>
+          <p class="tagline">Privacy-first, self-hosted AI agents. Your keys. Your data. Your machine.</p>
+        </div>
+        <div class="col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://github.com/kunalpatel90/privateforge-app">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Get started</h4>
+          <ul>
+            <li><a href="https://app.privateforge.ai/#/signup">Start free trial</a></li>
+            <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> PrivateForge, Inc.</span>
+        <div class="meta">
+          <span>Built for private workflows.</span>
+          <a href="security.html">Privacy & security</a>
+          <a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The audit log — PrivateForge</title>
+  <meta name="description" content="Replayable, exportable, deletable — what we learned building one and why every agentic system needs one." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a href="../index.html" class="brand" aria-label="PrivateForge home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" aria-hidden="true">
+          <rect x="24" y="108" width="120" height="22" rx="11" fill="#2563EB"/>
+          <rect x="40" y="80"  width="120" height="22" rx="11" fill="#0D9488"/>
+          <rect x="56" y="52"  width="120" height="22" rx="11" fill="#F59E0B"/>
+          <polygon points="136,34 139,24 142,34 152,31 142,28 139,18 136,28 126,31" fill="#EF4444"/>
+          <polygon points="152,20 154,14 156,20 162,18 156,16 154,10 152,16 146,18" fill="#F97316" fill-opacity="0.85"/>
+          <polygon points="124,40 126,34 128,40 134,38 128,36 126,30 124,36 118,38" fill="#FBBF24" fill-opacity="0.65"/>
+        </svg>
+        <span class="brand__name"><strong>Private</strong><em>Forge</em></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#stations" class="nav-link">Stations</a>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+        <a href="../blog.html" class="nav-link" aria-current="page">Blog</a>
+        <a href="../manifesto.html" class="nav-link">Manifesto</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a href="https://app.privateforge.ai" class="nav__cta">Open the forge →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="shell longform">
+      <div class="lf-eyebrow reveal">The Bench · № 01 · Apr 02, 2026</div>
+      <h1 class="reveal">An audit log is the most <em>underrated</em> AI feature.</h1>
+
+      <p class="lead reveal">
+        For a year we have been arguing about hallucinations, autonomy, and trust. The argument is interesting and mostly unresolved. Meanwhile, the simplest answer to most of those problems sits one design decision away: write down what the agent did.
+      </p>
+
+      <p class="has-dropcap reveal">
+        An audit log is not a privacy feature. It is a sanity feature. When the agent reads a page, you should be able to read the page. When it writes a file, you should be able to find the file. When it spends three cents on a model run, you should see the three cents. The audit log is the workshop's clipboard — every job recorded, every tool returned to the wall, every piece of stock accounted for.
+      </p>
+
+      <h2 class="reveal">What ours looks like.</h2>
+      <p class="reveal">
+        Append-only. Local. Replayable, which is to say: every entry has enough state to reconstruct the run that produced it. Exportable as JSON, which is to say: you can take it to a compliance review and read it without our help. Deletable, which is to say: when you delete the run, the log goes with it. There is no shadow copy on a server somewhere.
+      </p>
+
+      <h2 class="reveal">What we learned building it.</h2>
+      <p class="reveal">
+        Three things. First, that an audit log changes how you write the agent — you start to design the behavior to read well in the log, which usually makes it better. Second, that users trust the system more once they know they can verify it, even if they never actually verify it. Third, that "log it locally and replay it later" obviates a lot of the elaborate observability infrastructure that cloud-first agentic systems end up bolting on.
+      </p>
+
+      <h2 class="reveal">Why we think every agentic system should have one.</h2>
+      <p class="reveal">
+        Because debugging an agent without one is divination. Because security review of an agent without one is theatre. Because the right way to earn user trust is not to insist on it but to make the system show its work — and the audit log is the simplest possible way to do that.
+      </p>
+
+      <p class="marker reveal">— PrivateForge, Apr 02, 2026</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__colophon">
+        <span>PrivateForge — Issue №<span data-issue>0001</span> · Updated <span data-stamp>Today</span></span>
+        <span>build <span class="build-hash" data-build>0000000</span></span>
+        <span>© <script>document.write(new Date().getFullYear())</script> PrivateForge. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

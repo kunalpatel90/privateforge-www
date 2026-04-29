@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to the bench — PrivateForge</title>
+  <meta name="description" content="A walkthrough of a real Tuesday at the bench — three tasks, three providers, zero data leaving the laptop." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a href="../index.html" class="brand" aria-label="PrivateForge home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" aria-hidden="true">
+          <rect x="24" y="108" width="120" height="22" rx="11" fill="#2563EB"/>
+          <rect x="40" y="80"  width="120" height="22" rx="11" fill="#0D9488"/>
+          <rect x="56" y="52"  width="120" height="22" rx="11" fill="#F59E0B"/>
+          <polygon points="136,34 139,24 142,34 152,31 142,28 139,18 136,28 126,31" fill="#EF4444"/>
+          <polygon points="152,20 154,14 156,20 162,18 156,16 154,10 152,16 146,18" fill="#F97316" fill-opacity="0.85"/>
+          <polygon points="124,40 126,34 128,40 134,38 128,36 126,30 124,36 118,38" fill="#FBBF24" fill-opacity="0.65"/>
+        </svg>
+        <span class="brand__name"><strong>Private</strong><em>Forge</em></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#stations" class="nav-link">Stations</a>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+        <a href="../blog.html" class="nav-link" aria-current="page">Blog</a>
+        <a href="../manifesto.html" class="nav-link">Manifesto</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a href="https://app.privateforge.ai" class="nav__cta">Open the forge →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="shell longform">
+      <div class="lf-eyebrow reveal">The Bench · № 03 · Apr 28, 2026</div>
+      <h1 class="reveal">Welcome to the bench: what a <em>private</em> workshop for your AI looks like in practice.</h1>
+
+      <p class="lead reveal">
+        On a Tuesday in April, three things happened on my laptop that would have, a year ago, required at least four browser tabs and a small leap of faith. None of them touched a server I do not own. All of them left a file on my disk that I can show you.
+      </p>
+
+      <p class="has-dropcap reveal">
+        I am not making a point about productivity. I am making a point about location. The interesting question with AI is not how fast it can write — that argument is over. The interesting question is where the writing happens, who reads it on the way through, and what is left behind when the run ends. PrivateForge starts from the answer most apps refuse to consider: the writing happens here, on this laptop, with these provider keys, and the only thing left behind is the file.
+      </p>
+
+      <h2 class="reveal">Task one: a research note that didn't go anywhere.</h2>
+      <p class="reveal">
+        I asked the bench to compare three battery-storage companies for a memo I owed a client. It pulled twelve sources, fetched four of them in full, and wrote a 1,400-word draft to a folder called <em>~/forge/storage</em>. The audit log shows every URL it visited and every cent the model run cost ($0.04 against my Anthropic key). My client's name appears nowhere in any system but mine. The provider saw the prompt; that is the trade I knowingly make. Everyone else — including PrivateForge — saw nothing.
+      </p>
+
+      <h2 class="reveal">Task two: a draft I rewrote with a different model.</h2>
+      <p class="reveal">
+        I wanted a second opinion. I switched the route to Gemini and asked it to argue against the conclusion of the Claude draft. The bench did the second run with the same context, same memory, same files — different brain. Both drafts are in the folder. I picked the parts I liked from each and wrote the final version myself. This is the workshop way: tools on the wall, you at the bench, your name on the work.
+      </p>
+
+      <h2 class="reveal">Task three: a scheduled job that runs while I sleep.</h2>
+      <p class="reveal">
+        Every Friday at 4pm, the bench summarizes my week's email into five bullets and saves them to <em>~/forge/weekly</em>. I read them on Saturday morning over coffee. The schedule lives on my machine. The run executes on my machine. The bullets land on my machine. No SaaS dashboard knows what my week looked like — only my coffee and I do.
+      </p>
+
+      <h2 class="reveal">What this adds up to.</h2>
+      <p class="reveal">
+        Three tasks. Three providers. Zero data leaving the laptop. A bill for token spend that came directly from Anthropic and Google, in amounts I can verify by reading their dashboards myself. A folder of artifacts that exists nowhere else in the world. And a quiet sense, at the end of the day, that the work I did belongs to me in the same plain way that the wood on a carpenter's bench belongs to the carpenter.
+      </p>
+
+      <p class="marker reveal">— Filed from the bench, Apr 28, 2026</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__colophon">
+        <span>PrivateForge — Issue №<span data-issue>0001</span> · Updated <span data-stamp>Today</span></span>
+        <span>build <span class="build-hash" data-build>0000000</span></span>
+        <span>© <script>document.write(new Date().getFullYear())</script> PrivateForge. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,285 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Security & privacy · PrivateForge</title>
-  <meta name="description" content="How PrivateForge keeps your data inside your trust boundary: BYOK with no LLM proxy, AWS KMS envelope encryption, self-hosted agent runtime, and an explicit 'what we don't do' list." />
-  <link rel="canonical" href="https://www.privateforge.ai/security.html" />
+  <title>Security — PrivateForge</title>
+  <meta name="description" content="How PrivateForge protects your data. Local-first execution, BYO keys, no cloud middleman, full audit log." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Security & privacy · PrivateForge" />
-  <meta property="og:description" content="How PrivateForge keeps your data inside your trust boundary: BYOK with no LLM proxy, AWS KMS envelope encryption, self-hosted agent runtime, and an explicit 'what we don't do' list." />
+  <meta property="og:title" content="Security — PrivateForge" />
+  <meta property="og:description" content="Local-first execution. Your keys. No middleman. Full audit log." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.privateforge.ai/security.html" />
-  <meta property="og:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
-  <meta property="og:site_name" content="PrivateForge" />
+  <meta property="og:url" content="https://privateforge.ai/security.html" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Security & privacy · PrivateForge" />
-  <meta name="twitter:description" content="How PrivateForge keeps your data inside your trust boundary: BYOK with no LLM proxy, AWS KMS envelope encryption, self-hosted agent runtime, and an explicit 'what we don't do' list." />
-  <meta name="twitter:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
-
-  <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)" />
-
-  <!-- Favicon (inline SVG as data URI) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'>
- <rect width='64' height='64' rx='14' fill='%230b0a10'/>
- <rect x='14' y='46' width='36' height='6' rx='1' fill='%23ff6b35' opacity='0.85'/>
- <path d='M18 38 L46 38 L42 46 L22 46 Z' fill='%23ff6b35' opacity='0.65'/>
- <path d='M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z' fill='%23ff6b35'/>
- <path d='M32 8 L38 22 L32 18 L26 22 Z' fill='%23ffb347' opacity='0.95'/>
- <circle cx='20' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
- <circle cx='44' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
-</svg>" />
-
-  <!-- Fonts -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/app-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/styles.css" />
-
-  <!-- Anti-FOUC theme set -->
-  <script>(function(){var t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap-xl nav">
-      <a class="brand" href="index.html" aria-label="PrivateForge home">
-        <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
-  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
-  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
-  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
-  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
-  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-</svg>
-        <span class="word">PrivateForge</span>
+    <div class="shell site-header__inner">
+      <a href="index.html" class="brand" aria-label="PrivateForge home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" aria-hidden="true">
+          <rect x="24" y="108" width="120" height="22" rx="11" fill="#2563EB"/>
+          <rect x="40" y="80"  width="120" height="22" rx="11" fill="#0D9488"/>
+          <rect x="56" y="52"  width="120" height="22" rx="11" fill="#F59E0B"/>
+          <polygon points="136,34 139,24 142,34 152,31 142,28 139,18 136,28 126,31" fill="#EF4444"/>
+          <polygon points="152,20 154,14 156,20 162,18 156,16 154,10 152,16 146,18" fill="#F97316" fill-opacity="0.85"/>
+          <polygon points="124,40 126,34 128,40 134,38 128,36 126,30 124,36 118,38" fill="#FBBF24" fill-opacity="0.65"/>
+        </svg>
+        <span class="brand__name"><strong>Private</strong><em>Forge</em></span>
       </a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-        <li><a href="features.html">Features</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="security.html" aria-current="page">Security</a></li>
-        <li><a href="docs.html">Docs</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="changelog.html">Changelog</a></li>
-        </ul>
-      </nav>
-      <div class="nav-cta">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#stations" class="nav-link">Stations</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="specs.html" class="nav-link">Specs</a>
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
         <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
-        <a class="btn btn-secondary btn-sm" href="https://app.privateforge.ai/#/login">Sign in</a>
-        <a class="btn btn-primary btn-sm" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
-        <button class="nav-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="mobile-menu" data-mobile-menu data-open="false">
-      <ul>
-        <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="security.html" aria-current="page">Security</a></li>
-          <li><a href="docs.html">Docs</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-        <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
-      </ul>
-      <div class="mobile-cta">
-        <a class="btn btn-primary" href="https://app.privateforge.ai/#/signup">Start free trial</a>
-      </div>
+        <a href="https://app.privateforge.ai" class="nav__cta">Open the forge →</a>
+      </nav>
     </div>
   </header>
 
-<main>
-    <section class="page-head">
-      <div class="grid-bg" aria-hidden="true"></div>
-      <div class="wrap">
-        <span class="eyebrow"><span class="dot"></span> Security & privacy</span>
-        <h1>The trust boundary <span class="accent">runs through your hardware.</span></h1>
-        <p class="lede">PrivateForge was built for teams who can't ship their codebase to a SaaS agent. That's not a marketing claim — it's the architecture.</p>
+  <main>
+    <section class="hero" style="padding-block: clamp(var(--space-16), 8vw, var(--space-24)) var(--space-12);">
+      <div class="shell">
+        <div class="hero__masthead reveal">
+          <span class="pub-name">PrivateForge — Security posture</span>
+          <span><span data-stamp>Today</span></span>
+          <span>v1.0</span>
+        </div>
+        <h1 class="hero__title reveal" style="font-size: var(--text-3xl); margin-top: var(--space-8);">
+          Your work,<br/><em>under your roof.</em>
+        </h1>
+        <p class="hero__lede reveal" data-delay="2" style="margin-top: var(--space-6); max-width: 60ch;">
+          PrivateForge is built on a single, stubborn idea: the safest place for your data is the place it already lives. We do not move it. We do not copy it. We do not ask you to trust a server we control. There is no server.
+        </p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap-default prose reveal">
-        <h2>The privacy model in one diagram</h2>
-        <pre class="codeblock" style="font-size: 12px; line-height: 1.5; white-space: pre; overflow-x: auto;"><span class="c-comment">                ┌──────────────────────────────────────────┐
-                │   YOUR LAPTOP / VPC / OFFICE SERVER       │
-                │  ┌────────────────────────────────────┐  │
-                │  │  PrivateForge agent (binary)       │  │
-                │  │  ├─ filesystem · shell · memory    │  │
-                │  │  ├─ browser (Browserbase)          │  │
-                │  │  └─ sandbox (E2B)                  │  │
-                │  └────────────┬───────────────────────┘  │
-                └───────────────┼──────────────────────────┘
-                                │  direct, your key, no proxy
-                                ▼
-                       ┌─────────────────┐
-                       │   Anthropic /   │
-                       │   OpenAI /      │
-                       │   Google APIs   │
-                       └─────────────────┘</span></pre>
-        <p class="muted" style="margin-top: var(--space-4); font-size: var(--text-sm);">PrivateForge's cloud handles auth, billing, and the org directory. It never sees your prompts, code, or LLM responses.</p>
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="wrap">
-        <div class="feature-grid-2 reveal">
-          <article class="card">
-            <div class="card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3>BYOK · no LLM proxy</h3>
-            <p>You bring API keys for Anthropic, OpenAI, and/or Google. The agent calls those providers <strong>directly</strong> from your machine. We never see prompts, completions, or tool outputs.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <h3>KMS envelope encryption</h3>
-            <p>Every secret — provider keys, OAuth tokens, deploy creds — is encrypted at rest using AWS KMS envelope encryption. Each secret has its own data key, wrapped by your customer master key.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <h3>Self-hosted by default</h3>
-            <p>The agent runs as a binary on your machine, your VPC, or your office server. Data plane and control plane are physically separate.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3>Auditable history</h3>
-            <p>Every action the agent takes — files read, commands run, calls made — is recorded in a structured history that you can query, export, and ship to your SIEM.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap-default">
-        <div class="section-head reveal">
-          <span class="eyebrow ghost">What we don't do</span>
-          <h2>The list of things PrivateForge will never do.</h2>
-          <p class="lede">A clear "no" list is more useful than a vague "yes" list. Here's what we explicitly don't, and won't, do.</p>
-        </div>
-        <div class="prose reveal">
-          <ul>
-            <li><strong>We don't proxy LLM calls.</strong> Your provider keys hit the provider directly from your machine.</li>
-            <li><strong>We don't train on your data.</strong> No model fine-tuning. No telemetry of prompts. No "anonymized samples."</li>
-            <li><strong>We don't read your code.</strong> Source files never leave your filesystem unless you point a tool at one that ships them somewhere (e.g., your own deploy command).</li>
-            <li><strong>We don't store prompts or completions on our servers.</strong> History lives locally with the agent.</li>
-            <li><strong>We don't decrypt your KMS-protected secrets server-side.</strong> Decryption happens on the agent runtime, after the agent has authenticated to your KMS as your IAM principal.</li>
-            <li><strong>We don't share your usage with model providers.</strong> Provider keys are yours; their billing reports stay on their dashboards.</li>
-            <li><strong>We don't ship a "cloud-hosted" version of the agent runtime.</strong> The agent is, by definition, the part you control.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap-default">
-        <div class="section-head reveal">
-          <span class="eyebrow ghost">Compliance roadmap</span>
-          <h2>What's on our compliance roadmap.</h2>
-        </div>
-        <div class="prose reveal">
-          <p>We're a pre-SOC2 company building toward formal compliance. Here's what's in flight:</p>
-          <ul>
-            <li><strong>SOC 2 Type I</strong> — initial audit window opens Q3 2026.</li>
-            <li><strong>SOC 2 Type II</strong> — target Q1 2027 (after 6-month observation period).</li>
-            <li><strong>SSO (SAML, OIDC)</strong> — engineering complete, beta Q3 2026.</li>
-            <li><strong>HIPAA-eligible deployment guide</strong> — for self-hosted installs in customer-controlled VPCs.</li>
-            <li><strong>SBOM and SLSA provenance</strong> for every release of the agent binary.</li>
-          </ul>
-          <p>If you have a specific compliance requirement, write us at <a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a>. The architecture is the answer to most of them — we just have to document it for your auditor.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="cta-strip reveal">
-          <h2>Architecture is destiny. <span class="accent">Pick yours wisely.</span></h2>
-          <p>Trial PrivateForge on a sensitive repo for a week. If your security team has questions, point them here.</p>
-          <div class="actions">
-            <a class="btn btn-primary btn-lg" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
-            <a class="btn btn-ghost btn-lg" href="mailto:hello@privateforge.ai?subject=Security%20review">Email security</a>
+    <section style="padding-block: 0 var(--space-16);">
+      <div class="shell">
+        <div class="floor__intro">
+          <div class="reveal">
+            <div class="section-eyebrow">№ 01 / Architecture</div>
+            <h2 class="section-title">Where everything actually<br/><em>lives.</em></h2>
           </div>
+          <p class="section-blurb reveal" data-delay="1">
+            Most "AI app" stacks have three legs: a client, a backend, and the model. PrivateForge removes the backend. The client runs on your machine. The model runs on the provider you chose. Your work moves between those two, in your name, and no one else is in the path.
+          </p>
+        </div>
+
+        <div class="stations">
+          <article class="station reveal">
+            <div class="station__no"><span>POSTURE 01</span><span class="glyph">◇</span></div>
+            <h3>Local execution</h3>
+            <p>The orchestrator, agents, file I/O, and audit log all run inside the app on your machine. No remote runtime.</p>
+            <ul><li>macOS / Windows native</li><li>No container required</li><li>No phone-home</li></ul>
+          </article>
+
+          <article class="station reveal" data-delay="1">
+            <div class="station__no"><span>POSTURE 02</span><span class="glyph">◇</span></div>
+            <h3>Your keys, your account</h3>
+            <p>Provider keys are stored in OS keychain. Requests go directly from your machine to the provider, under your terms of service.</p>
+            <ul><li>macOS Keychain</li><li>Windows Credential Manager</li><li>No proxy</li></ul>
+          </article>
+
+          <article class="station reveal" data-delay="2">
+            <div class="station__no"><span>POSTURE 03</span><span class="glyph">◇</span></div>
+            <h3>No training on your work</h3>
+            <p>We do not collect your prompts, files, or memory. Provider terms govern cloud calls; we recommend reading them.</p>
+            <ul><li>Zero retention</li><li>No telemetry by default</li><li>Crash reports opt-in</li></ul>
+          </article>
+
+          <article class="station reveal" data-delay="3">
+            <div class="station__no"><span>POSTURE 04</span><span class="glyph">◇</span></div>
+            <h3>Audit log</h3>
+            <p>Every tool call, file write, and URL visit is recorded locally. Replayable. Exportable. Deletable.</p>
+            <ul><li>Tool calls</li><li>File writes</li><li>Network egress</li></ul>
+          </article>
+
+          <article class="station reveal" data-delay="4">
+            <div class="station__no"><span>POSTURE 05</span><span class="glyph">◇</span></div>
+            <h3>Connector permissions</h3>
+            <p>Each connector authorizes against your account with the narrowest scope that works. You can revoke anytime.</p>
+            <ul><li>Per-connector OAuth</li><li>Scoped tokens</li><li>One-click revoke</li></ul>
+          </article>
+
+          <article class="station reveal" data-delay="5">
+            <div class="station__no"><span>POSTURE 06</span><span class="glyph">◇</span></div>
+            <h3>Optional cloud sync</h3>
+            <p>Off by default. When on, end-to-end encrypted with a key only your devices hold. We cannot decrypt it.</p>
+            <ul><li>E2E encrypted</li><li>Per-device keys</li><li>Off by default</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-block: var(--space-12) var(--space-16); border-top: 1px solid var(--rule-soft);">
+      <div class="shell">
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 02 / Data flow</h2>
+        <table class="spec-table reveal" style="margin-bottom: var(--space-16);">
+          <tr>
+            <th>Where prompts go</th>
+            <td>Direct to your chosen model provider. <span class="qual">No PrivateForge server in the path.</span></td>
+          </tr>
+          <tr>
+            <th>Where outputs go</th>
+            <td>To your local disk, in the project folder you specify. <span class="qual">Nothing copied off-device.</span></td>
+          </tr>
+          <tr>
+            <th>Where memory lives</th>
+            <td>Local SQLite database in your home directory. <span class="qual">You can read it. You can edit it. You can delete it.</span></td>
+          </tr>
+          <tr>
+            <th>Where the audit log lives</th>
+            <td>Local file, append-only. <span class="qual">Rotated weekly. Configurable retention.</span></td>
+          </tr>
+          <tr>
+            <th>Where connector tokens live</th>
+            <td>OS keychain (macOS Keychain / Windows Credential Manager). <span class="qual">Never in plaintext on disk.</span></td>
+          </tr>
+          <tr>
+            <th>Crash reports</th>
+            <td>Off by default. Opt-in, scoped to stack traces with PII filtered. <span class="qual">No prompt or file content.</span></td>
+          </tr>
+        </table>
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 03 / Compliance</h2>
+        <table class="spec-table reveal" style="margin-bottom: var(--space-16);">
+          <tr>
+            <th>SOC 2</th>
+            <td>Type I in progress for cloud sync. <span class="qual">Local-only usage requires no certification — the data never leaves you.</span></td>
+          </tr>
+          <tr>
+            <th>GDPR</th>
+            <td>By design. <span class="qual">No data transfer occurs because no data is collected. DPA available on request.</span></td>
+          </tr>
+          <tr>
+            <th>HIPAA</th>
+            <td>Local-only mode is suitable for PHI workflows. <span class="qual">BAA available on Enterprise.</span></td>
+          </tr>
+          <tr>
+            <th>Sub-processors</th>
+            <td>None for local mode. <span class="qual">Cloud sync uses one storage provider, listed publicly.</span></td>
+          </tr>
+        </table>
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 04 / Reporting issues</h2>
+        <table class="spec-table reveal">
+          <tr>
+            <th>Vulnerability disclosure</th>
+            <td><a href="mailto:security@privateforge.ai" style="color: var(--accent); border-bottom: 1px solid var(--accent);">security@privateforge.ai</a> · <span class="qual">PGP key on request. We respond within 48 hours.</span></td>
+          </tr>
+          <tr>
+            <th>Bug bounty</th>
+            <td>Coordinated disclosure with named credit. <span class="qual">Cash bounty program in scoping for v1.1.</span></td>
+          </tr>
+          <tr>
+            <th>Status page</th>
+            <td><a href="https://status.privateforge.ai" style="color: var(--accent); border-bottom: 1px solid var(--accent);">status.privateforge.ai</a> for cloud-sync uptime.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="manifesto-pull">
+      <div class="shell">
+        <div class="reveal">
+          <p class="manifesto-pull__inner">
+            The safest server is <em>no server</em>.
+          </p>
+          <p class="manifesto-pull__cite">— PrivateForge security posture, v1.0</p>
         </div>
       </div>
     </section>
   </main>
-<footer class="site-footer">
-    <div class="wrap-xl">
-      <div class="footer-grid">
-        <div class="col footer-brand">
-          <a class="brand" href="index.html" aria-label="PrivateForge home">
-            <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
-  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
-  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
-  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
-  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
-  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-</svg>
-            <span class="word">PrivateForge</span>
-          </a>
-          <p class="tagline">Privacy-first, self-hosted AI agents. Your keys. Your data. Your machine.</p>
-        </div>
-        <div class="col">
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__inner">
+        <div>
           <h4>Product</h4>
           <ul>
-            <li><a href="features.html">Features</a></li>
+            <li><a href="https://app.privateforge.ai">Open the forge</a></li>
+            <li><a href="index.html#stations">Stations</a></li>
+            <li><a href="specs.html">Specs</a></li>
             <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="security.html">Security</a></li>
             <li><a href="changelog.html">Changelog</a></li>
           </ul>
         </div>
-        <div class="col">
-          <h4>Resources</h4>
+        <div>
+          <h4>Read</h4>
           <ul>
-            <li><a href="docs.html">Docs</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="https://github.com/kunalpatel90/privateforge-app">GitHub</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="security.html">Security</a></li>
           </ul>
         </div>
-        <div class="col">
-          <h4>Company</h4>
+        <div>
+          <h4>Account</h4>
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a></li>
+            <li><a href="https://app.privateforge.ai/login">Sign in</a></li>
+            <li><a href="https://app.privateforge.ai/signup">Create account</a></li>
           </ul>
         </div>
-        <div class="col">
-          <h4>Get started</h4>
+        <div>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="https://app.privateforge.ai/#/signup">Start free trial</a></li>
-            <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="mailto:security@privateforge.ai">security@privateforge.ai</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> PrivateForge, Inc.</span>
-        <div class="meta">
-          <span>Built for private workflows.</span>
-          <a href="security.html">Privacy & security</a>
-          <a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a>
-        </div>
+
+      <div class="site-footer__colophon">
+        <span>PrivateForge — Issue №<span data-issue>0001</span> · Updated <span data-stamp>Today</span></span>
+        <span>build <span class="build-hash" data-build>0000000</span></span>
+        <span>© <script>document.write(new Date().getFullYear())</script> PrivateForge. All rights reserved.</span>
       </div>
     </div>
   </footer>
+
   <script src="assets/site.js" defer></script>
 </body>
 </html>

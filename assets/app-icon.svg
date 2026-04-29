@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- PrivateForge app icon — C7 on dark rounded square -->
+  <rect width="512" height="512" rx="96" fill="#111827"/>
+  <!-- Pills centered and scaled up -->
+  <rect x="76" y="304" width="268" height="48" rx="24" fill="#3B82F6"/>
+  <rect x="112" y="236" width="268" height="48" rx="24" fill="#14B8A6"/>
+  <rect x="148" y="168" width="268" height="48" rx="24" fill="#FBBF24"/>
+  <!-- Star sparks -->
+  <polygon points="340,128 346,104 352,128 376,120 352,112 346,88 340,112 316,120" fill="#EF4444"/>
+  <polygon points="380,92 384,78 388,92 404,86 388,82 384,68 380,82 364,86" fill="#FB923C" opacity="0.85"/>
+  <polygon points="308,148 312,132 316,148 332,142 316,138 312,122 308,138 292,142" fill="#FDE68A" opacity="0.6"/>
+</svg>

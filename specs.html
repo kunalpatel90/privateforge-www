@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Specs — PrivateForge</title>
+  <meta name="description" content="The full PrivateForge spec sheet: where it runs, who sees your data, what it costs, what's included." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a href="index.html" class="brand" aria-label="PrivateForge home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" aria-hidden="true">
+          <rect x="24" y="108" width="120" height="22" rx="11" fill="#2563EB"/>
+          <rect x="40" y="80"  width="120" height="22" rx="11" fill="#0D9488"/>
+          <rect x="56" y="52"  width="120" height="22" rx="11" fill="#F59E0B"/>
+          <polygon points="136,34 139,24 142,34 152,31 142,28 139,18 136,28 126,31" fill="#EF4444"/>
+          <polygon points="152,20 154,14 156,20 162,18 156,16 154,10 152,16 146,18" fill="#F97316" fill-opacity="0.85"/>
+          <polygon points="124,40 126,34 128,40 134,38 128,36 126,30 124,36 118,38" fill="#FBBF24" fill-opacity="0.65"/>
+        </svg>
+        <span class="brand__name"><strong>Private</strong><em>Forge</em></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#stations" class="nav-link">Stations</a>
+        <a href="pricing.html"        class="nav-link">Pricing</a>
+        <a href="specs.html"          class="nav-link" aria-current="page">Specs</a>
+        <a href="manifesto.html"      class="nav-link">Manifesto</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a href="https://app.privateforge.ai" class="nav__cta">Open the forge →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-block: clamp(var(--space-16), 8vw, var(--space-24)) var(--space-12);">
+      <div class="shell">
+        <div class="hero__masthead reveal">
+          <span class="pub-name">PrivateForge — Spec sheet</span>
+          <span><span data-stamp>Today</span></span>
+          <span>Version 1.0</span>
+        </div>
+        <h1 class="hero__title reveal" style="font-size: var(--text-3xl); margin-top: var(--space-8);">
+          What you <em>actually</em> get.
+        </h1>
+        <p class="hero__lede reveal" data-delay="2" style="margin-top: var(--space-6);">
+          Every fact about the product, in a flat table. No animated charts, no hand-wavy adjectives.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding-block: 0 var(--space-16); border-top: none;">
+      <div class="shell">
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 01 / Runtime</h2>
+        <table class="spec-table reveal" style="margin-bottom: var(--space-16);">
+          <tr><th>Where it runs</th><td>macOS 13+ · Windows 11. <span class="qual">Native installer, no container.</span></td></tr>
+          <tr><th>Disk</th><td>~280MB installed. Logs and memory grow with use.</td></tr>
+          <tr><th>Memory</th><td>Idle ~120MB. Per-task spikes vary by model.</td></tr>
+          <tr><th>Network</th><td>Outbound only — to your provider APIs and connectors you authorize.</td></tr>
+          <tr><th>Offline mode</th><td>Local models work without internet. Cloud models require connectivity.</td></tr>
+        </table>
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 02 / Privacy</h2>
+        <table class="spec-table reveal" style="margin-bottom: var(--space-16);">
+          <tr><th>Data routing</th><td>Direct from your machine to the model provider. <span class="val">PrivateForge is not in the request path.</span></td></tr>
+          <tr><th>Training</th><td>We never train on your prompts, files, or memory. <span class="qual">Provider terms apply for cloud calls.</span></td></tr>
+          <tr><th>Logging</th><td>Local-only audit log of tool calls, file writes, and URLs visited. Replayable, exportable, deletable.</td></tr>
+          <tr><th>Telemetry</th><td>Off by default. Opt-in, scoped to crash reports.</td></tr>
+          <tr><th>Account</th><td>Required for cloud sync only. Most workflows run without one.</td></tr>
+        </table>
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 03 / Models</h2>
+        <table class="spec-table reveal" style="margin-bottom: var(--space-16);">
+          <tr><th>Cloud</th><td>Anthropic Claude · OpenAI ChatGPT · Google Gemini. <span class="qual">Bring your own keys.</span></td></tr>
+          <tr><th>Local</th><td>llama.cpp · MLX · Ollama backends. <span class="qual">Any GGUF model.</span></td></tr>
+          <tr><th>Routing</th><td>Per-task model selection. Set defaults per project.</td></tr>
+          <tr><th>Cost transparency</th><td>Token counts and costs surfaced after every call.</td></tr>
+        </table>
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 04 / Connectors</h2>
+        <table class="spec-table reveal" style="margin-bottom: var(--space-16);">
+          <tr><th>Mail</th><td>Gmail · Outlook · Zoho Mail</td></tr>
+          <tr><th>Calendar</th><td>Google Calendar · Outlook</td></tr>
+          <tr><th>Files</th><td>Google Drive · Local filesystem</td></tr>
+          <tr><th>Code</th><td>GitHub · Local git</td></tr>
+          <tr><th>Work</th><td>Notion · Linear · Slack</td></tr>
+          <tr><th>Commerce</th><td>Stripe · Shopify · Zoho Books</td></tr>
+          <tr><th>Surface</th><td>Custom MCP servers. <span class="qual">Bring your own tools.</span></td></tr>
+        </table>
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 05 / License & price</h2>
+        <table class="spec-table reveal" style="margin-bottom: var(--space-16);">
+          <tr><th>License</th><td>Per-seat, annual.</td></tr>
+          <tr><th>Solo</th><td><span class="val">$120 / year</span> per seat. <span class="qual">Unlimited tasks, all features.</span></td></tr>
+          <tr><th>Team</th><td><span class="val">$96 / year</span> per seat (5+ seats). Shared connectors, shared memory.</td></tr>
+          <tr><th>Trial</th><td>14 days, no card.</td></tr>
+          <tr><th>Token spend</th><td>Paid to your provider, not to us. Use the cheapest model that works.</td></tr>
+        </table>
+
+        <h2 class="section-eyebrow reveal" style="margin-bottom: var(--space-3);">№ 06 / Version history</h2>
+        <table class="spec-table reveal">
+          <tr><th>v1.0 — Apr 2026</th><td>First public release. Six stations, ten connectors, three cloud providers, local model support.</td></tr>
+          <tr><th>v0.9 — Mar 2026</th><td>Beta. Added scheduled runs, durable memory, audit log replay.</td></tr>
+          <tr><th>v0.5 — Jan 2026</th><td>Closed alpha. Research and Build stations only.</td></tr>
+        </table>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__inner">
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="https://app.privateforge.ai">Open the forge</a></li>
+            <li><a href="index.html#stations">Stations</a></li>
+            <li><a href="specs.html" aria-current="page">Specs</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Read</h4>
+          <ul>
+            <li><a href="manifesto.html">Manifesto</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="security.html">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="https://app.privateforge.ai/login">Sign in</a></li>
+            <li><a href="https://app.privateforge.ai/signup">Create account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__colophon">
+        <span>PrivateForge — Issue №<span data-issue>0001</span> · Updated <span data-stamp>Today</span></span>
+        <span>build <span class="build-hash" data-build>0000000</span></span>
+        <span>© <script>document.write(new Date().getFullYear())</script> PrivateForge. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,233 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact · PrivateForge</title>
-  <meta name="description" content="Reach the PrivateForge team: hello@privateforge.ai for sales, support, security disclosure, or anything else. We read every email." />
-  <link rel="canonical" href="https://www.privateforge.ai/contact.html" />
+  <title>Contact — PrivateForge</title>
+  <meta name="description" content="Talk to a human. Sales, support, security, press — every desk has a real address." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Contact · PrivateForge" />
-  <meta property="og:description" content="Reach the PrivateForge team: hello@privateforge.ai for sales, support, security disclosure, or anything else. We read every email." />
+  <meta property="og:title" content="Contact — PrivateForge" />
+  <meta property="og:description" content="Talk to a human." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.privateforge.ai/contact.html" />
-  <meta property="og:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
-  <meta property="og:site_name" content="PrivateForge" />
+  <meta property="og:url" content="https://privateforge.ai/contact.html" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact · PrivateForge" />
-  <meta name="twitter:description" content="Reach the PrivateForge team: hello@privateforge.ai for sales, support, security disclosure, or anything else. We read every email." />
-  <meta name="twitter:image" content="https://www.privateforge.ai/images/hero-sparks.webp" />
-
-  <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)" />
-
-  <!-- Favicon (inline SVG as data URI) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'>
- <rect width='64' height='64' rx='14' fill='%230b0a10'/>
- <rect x='14' y='46' width='36' height='6' rx='1' fill='%23ff6b35' opacity='0.85'/>
- <path d='M18 38 L46 38 L42 46 L22 46 Z' fill='%23ff6b35' opacity='0.65'/>
- <path d='M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z' fill='%23ff6b35'/>
- <path d='M32 8 L38 22 L32 18 L26 22 Z' fill='%23ffb347' opacity='0.95'/>
- <circle cx='20' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
- <circle cx='44' cy='20' r='1.6' fill='%23ffd58a' opacity='0.85'/>
-</svg>" />
-
-  <!-- Fonts -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/app-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/styles.css" />
-
-  <!-- Anti-FOUC theme set -->
-  <script>(function(){var t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap-xl nav">
-      <a class="brand" href="index.html" aria-label="PrivateForge home">
-        <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
-  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
-  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
-  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
-  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
-  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-</svg>
-        <span class="word">PrivateForge</span>
+    <div class="shell site-header__inner">
+      <a href="index.html" class="brand" aria-label="PrivateForge home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" aria-hidden="true">
+          <rect x="24" y="108" width="120" height="22" rx="11" fill="#2563EB"/>
+          <rect x="40" y="80"  width="120" height="22" rx="11" fill="#0D9488"/>
+          <rect x="56" y="52"  width="120" height="22" rx="11" fill="#F59E0B"/>
+          <polygon points="136,34 139,24 142,34 152,31 142,28 139,18 136,28 126,31" fill="#EF4444"/>
+          <polygon points="152,20 154,14 156,20 162,18 156,16 154,10 152,16 146,18" fill="#F97316" fill-opacity="0.85"/>
+          <polygon points="124,40 126,34 128,40 134,38 128,36 126,30 124,36 118,38" fill="#FBBF24" fill-opacity="0.65"/>
+        </svg>
+        <span class="brand__name"><strong>Private</strong><em>Forge</em></span>
       </a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-        <li><a href="features.html">Features</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="security.html">Security</a></li>
-        <li><a href="docs.html">Docs</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="changelog.html">Changelog</a></li>
-        </ul>
-      </nav>
-      <div class="nav-cta">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#stations" class="nav-link">Stations</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="docs.html" class="nav-link">Docs</a>
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
         <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
-        <a class="btn btn-secondary btn-sm" href="https://app.privateforge.ai/#/login">Sign in</a>
-        <a class="btn btn-primary btn-sm" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
-        <button class="nav-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="mobile-menu" data-mobile-menu data-open="false">
-      <ul>
-        <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="security.html">Security</a></li>
-          <li><a href="docs.html">Docs</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-        <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
-      </ul>
-      <div class="mobile-cta">
-        <a class="btn btn-primary" href="https://app.privateforge.ai/#/signup">Start free trial</a>
-      </div>
+        <a href="https://app.privateforge.ai" class="nav__cta">Open the forge →</a>
+      </nav>
     </div>
   </header>
 
-<main>
-    <section class="page-head">
-      <div class="grid-bg" aria-hidden="true"></div>
-      <div class="wrap">
-        <span class="eyebrow"><span class="dot"></span> Contact</span>
-        <h1>Talk to us. <span class="accent">We read every email.</span></h1>
-        <p class="lede">The fastest way to reach us is plain old email. For sales, security review, or "how do I do X" — same address.</p>
+  <main>
+    <section class="hero" style="padding-block: clamp(var(--space-16), 8vw, var(--space-24)) var(--space-12);">
+      <div class="shell">
+        <div class="hero__masthead reveal">
+          <span class="pub-name">PrivateForge — Front desk</span>
+          <span><span data-stamp>Today</span></span>
+          <span>v1.0</span>
+        </div>
+        <h1 class="hero__title reveal" style="font-size: var(--text-3xl); margin-top: var(--space-8);">
+          Talk to <em>a human.</em>
+        </h1>
+        <p class="hero__lede reveal" data-delay="2" style="margin-top: var(--space-6); max-width: 56ch;">
+          Every desk has a real address. We answer email. Pick the one that matches what you need and we will get back to you within one business day.
+        </p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap-default">
-        <div class="two-col reveal" style="align-items: start;">
-          <div>
-            <h2 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 500; letter-spacing: -0.02em; margin-bottom: var(--space-5);">Direct lines</h2>
-            <div class="feature-grid" style="grid-template-columns: 1fr;">
-              <article class="card">
-                <h3>General · Sales · Anything</h3>
-                <p><a href="mailto:hello@privateforge.ai" style="color: var(--color-primary); border-bottom: 1px dashed currentColor;">hello@privateforge.ai</a></p>
-                <p class="muted" style="font-size: var(--text-sm); margin-top: var(--space-2);">Average reply time: under one business day.</p>
-              </article>
-              <article class="card">
-                <h3>Source code & issues</h3>
-                <p><a href="https://github.com/kunalpatel90/privateforge-app" style="color: var(--color-primary); border-bottom: 1px dashed currentColor;">github.com/kunalpatel90/privateforge-app</a></p>
-                <p class="muted" style="font-size: var(--text-sm); margin-top: var(--space-2);">Open an issue, submit a PR, or just watch the repo for releases.</p>
-              </article>
-              <article class="card">
-                <h3>Security disclosure</h3>
-                <p><a href="mailto:hello@privateforge.ai?subject=Security%20disclosure" style="color: var(--color-primary); border-bottom: 1px dashed currentColor;">hello@privateforge.ai</a></p>
-                <p class="muted" style="font-size: var(--text-sm); margin-top: var(--space-2);">Subject line "Security disclosure". We respond within 24 hours.</p>
-              </article>
-            </div>
-          </div>
+    <section style="padding-block: 0 var(--space-20);">
+      <div class="shell">
+        <div class="contact-grid">
+          <article class="contact-card reveal">
+            <header class="contact-card__head">
+              <span class="contact-card__no">DESK 01</span>
+              <h3>General</h3>
+            </header>
+            <p>Questions, feedback, or you just want to say hello.</p>
+            <a class="contact-card__email" href="mailto:hello@privateforge.ai">hello@privateforge.ai</a>
+          </article>
 
-          <div>
-            <h2 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 500; letter-spacing: -0.02em; margin-bottom: var(--space-5);">Send a note</h2>
-            <form class="form card" action="mailto:hello@privateforge.ai" method="post" enctype="text/plain" style="padding: var(--space-6);">
-              <label>
-                Your name
-                <input type="text" name="name" required autocomplete="name" />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
-              </label>
-              <label>
-                What's on your mind?
-                <textarea name="message" required placeholder="Evaluating PrivateForge for our team — looking for X, Y, Z…"></textarea>
-              </label>
-              <button class="btn btn-primary" type="submit">Send <span class="btn-arrow">→</span></button>
-              <p class="muted" style="font-size: var(--text-xs);">This form opens your default email client. No data is posted to our servers.</p>
-            </form>
-          </div>
+          <article class="contact-card reveal" data-delay="1">
+            <header class="contact-card__head">
+              <span class="contact-card__no">DESK 02</span>
+              <h3>Sales</h3>
+            </header>
+            <p>Team plans, enterprise, procurement, custom MSAs.</p>
+            <a class="contact-card__email" href="mailto:sales@privateforge.ai">sales@privateforge.ai</a>
+          </article>
+
+          <article class="contact-card reveal" data-delay="2">
+            <header class="contact-card__head">
+              <span class="contact-card__no">DESK 03</span>
+              <h3>Support</h3>
+            </header>
+            <p>Stuck on the bench? We will get you unstuck.</p>
+            <a class="contact-card__email" href="mailto:support@privateforge.ai">support@privateforge.ai</a>
+          </article>
+
+          <article class="contact-card reveal" data-delay="3">
+            <header class="contact-card__head">
+              <span class="contact-card__no">DESK 04</span>
+              <h3>Security</h3>
+            </header>
+            <p>Vulnerability disclosure, security questionnaires, BAAs.</p>
+            <a class="contact-card__email" href="mailto:security@privateforge.ai">security@privateforge.ai</a>
+          </article>
+
+          <article class="contact-card reveal" data-delay="4">
+            <header class="contact-card__head">
+              <span class="contact-card__no">DESK 05</span>
+              <h3>Press</h3>
+            </header>
+            <p>Interviews, embargoed previews, fact-checks.</p>
+            <a class="contact-card__email" href="mailto:press@privateforge.ai">press@privateforge.ai</a>
+          </article>
+
+          <article class="contact-card reveal" data-delay="5">
+            <header class="contact-card__head">
+              <span class="contact-card__no">DESK 06</span>
+              <h3>Careers</h3>
+            </header>
+            <p>Small team. Tall standards. Send us your work.</p>
+            <a class="contact-card__email" href="mailto:careers@privateforge.ai">careers@privateforge.ai</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="cta-strip reveal">
-          <h2>Or just dive in.</h2>
-          <p>The 7-day trial is the fastest way to evaluate. No card, every feature unlocked.</p>
-          <div class="actions">
-            <a class="btn btn-primary btn-lg" href="https://app.privateforge.ai/#/signup">Start free trial <span class="btn-arrow">→</span></a>
-            <a class="btn btn-ghost btn-lg" href="features.html">Read features</a>
+    <section style="padding-block: 0 var(--space-20); border-top: 1px solid var(--rule-soft);">
+      <div class="shell" style="padding-top: var(--space-16);">
+        <div class="floor__intro specs__intro">
+          <div class="reveal">
+            <div class="section-eyebrow">№ 02 / Subscribe</div>
+            <h2 class="section-title">Notes from the bench,<br/><em>in your inbox.</em></h2>
           </div>
+          <p class="section-blurb reveal" data-delay="1">
+            Roughly every two weeks. Essays, release notes, and the occasional letter to the reader. No tracking pixels. Unsubscribe in one click.
+          </p>
         </div>
+
+        <form class="newsletter reveal" action="https://privateforge.ai/api/subscribe" method="post" novalidate>
+          <label for="email-newsletter" class="sr-only">Email address</label>
+          <input id="email-newsletter" type="email" name="email" placeholder="you@yourdomain.com" required class="newsletter__input" />
+          <button type="submit" class="btn btn--primary newsletter__submit">Subscribe <span class="arrow">→</span></button>
+        </form>
+        <p class="reveal" style="margin-top: var(--space-4); font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-muted);">
+          We use your address to send you the newsletter and nothing else.
+        </p>
       </div>
     </section>
   </main>
-<footer class="site-footer">
-    <div class="wrap-xl">
-      <div class="footer-grid">
-        <div class="col footer-brand">
-          <a class="brand" href="index.html" aria-label="PrivateForge home">
-            <svg class="mark" viewBox="0 0 64 64" fill="none" aria-label="PrivateForge" xmlns="http://www.w3.org/2000/svg">
-  <rect x="14" y="46" width="36" height="6" rx="1" fill="currentColor" opacity="0.85"/>
-  <path d="M18 38 L46 38 L42 46 L22 46 Z" fill="currentColor" opacity="0.6"/>
-  <path d="M16 30 L44 30 L48 34 L44 38 L20 38 L16 34 Z" fill="currentColor"/>
-  <path d="M32 8 L38 22 L32 18 L26 22 Z" fill="currentColor" opacity="0.9"/>
-  <circle cx="20" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-  <circle cx="44" cy="20" r="1.5" fill="currentColor" opacity="0.7"/>
-</svg>
-            <span class="word">PrivateForge</span>
-          </a>
-          <p class="tagline">Privacy-first, self-hosted AI agents. Your keys. Your data. Your machine.</p>
-        </div>
-        <div class="col">
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__inner">
+        <div>
           <h4>Product</h4>
           <ul>
-            <li><a href="features.html">Features</a></li>
+            <li><a href="https://app.privateforge.ai">Open the forge</a></li>
+            <li><a href="index.html#stations">Stations</a></li>
+            <li><a href="specs.html">Specs</a></li>
             <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="security.html">Security</a></li>
             <li><a href="changelog.html">Changelog</a></li>
           </ul>
         </div>
-        <div class="col">
-          <h4>Resources</h4>
+        <div>
+          <h4>Read</h4>
           <ul>
-            <li><a href="docs.html">Docs</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="https://github.com/kunalpatel90/privateforge-app">GitHub</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="security.html">Security</a></li>
           </ul>
         </div>
-        <div class="col">
-          <h4>Company</h4>
+        <div>
+          <h4>Account</h4>
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://app.privateforge.ai/login">Sign in</a></li>
+            <li><a href="https://app.privateforge.ai/signup">Create account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html" aria-current="page">Contact us</a></li>
             <li><a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a></li>
           </ul>
         </div>
-        <div class="col">
-          <h4>Get started</h4>
-          <ul>
-            <li><a href="https://app.privateforge.ai/#/signup">Start free trial</a></li>
-            <li><a href="https://app.privateforge.ai/#/login">Sign in</a></li>
-          </ul>
-        </div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> PrivateForge, Inc.</span>
-        <div class="meta">
-          <span>Built for private workflows.</span>
-          <a href="security.html">Privacy & security</a>
-          <a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a>
-        </div>
+
+      <div class="site-footer__colophon">
+        <span>PrivateForge — Issue №<span data-issue>0001</span> · Updated <span data-stamp>Today</span></span>
+        <span>build <span class="build-hash" data-build>0000000</span></span>
+        <span>© <script>document.write(new Date().getFullYear())</script> PrivateForge. All rights reserved.</span>
       </div>
     </div>
   </footer>
+
   <script src="assets/site.js" defer></script>
 </body>
 </html>

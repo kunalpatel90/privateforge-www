@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BYO keys is a posture — PrivateForge</title>
+  <meta name="description" content="Why every AI app should let you point at the model you already pay for — and why most of them won't." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a href="../index.html" class="brand" aria-label="PrivateForge home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" aria-hidden="true">
+          <rect x="24" y="108" width="120" height="22" rx="11" fill="#2563EB"/>
+          <rect x="40" y="80"  width="120" height="22" rx="11" fill="#0D9488"/>
+          <rect x="56" y="52"  width="120" height="22" rx="11" fill="#F59E0B"/>
+          <polygon points="136,34 139,24 142,34 152,31 142,28 139,18 136,28 126,31" fill="#EF4444"/>
+          <polygon points="152,20 154,14 156,20 162,18 156,16 154,10 152,16 146,18" fill="#F97316" fill-opacity="0.85"/>
+          <polygon points="124,40 126,34 128,40 134,38 128,36 126,30 124,36 118,38" fill="#FBBF24" fill-opacity="0.65"/>
+        </svg>
+        <span class="brand__name"><strong>Private</strong><em>Forge</em></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#stations" class="nav-link">Stations</a>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+        <a href="../blog.html" class="nav-link" aria-current="page">Blog</a>
+        <a href="../manifesto.html" class="nav-link">Manifesto</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a href="https://app.privateforge.ai" class="nav__cta">Open the forge →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="shell longform">
+      <div class="lf-eyebrow reveal">The Bench · № 02 · Apr 14, 2026</div>
+      <h1 class="reveal">Bring your own keys is not a feature.<br/>It is a <em>posture.</em></h1>
+
+      <p class="lead reveal">
+        Every AI product, eventually, has to answer a single question: whose API key are we billing? The answer to that question reveals whether you are looking at a tool or at a middleman.
+      </p>
+
+      <p class="has-dropcap reveal">
+        The middleman model is the default in our industry because it is the easiest to monetize. You wrap a model. You charge a margin on its tokens. You collect prompts as training fodder. You pretend the user can leave at any time, knowing they will not, because their data is now distributed across your servers in a way they could not unwind even if they tried.
+      </p>
+
+      <h2 class="reveal">The argument for BYO keys.</h2>
+      <p class="reveal">
+        BYO keys flips this. The user pays the model provider directly, at list price, with no markup. The product makes its money on the surface — the workshop, the schedule, the audit log, the file system — and not on the substrate. The user owns the relationship with their model. The user can switch models without switching products. The user can read their own bill.
+      </p>
+
+      <h2 class="reveal">Why most products won't do it.</h2>
+      <p class="reveal">
+        Because the margin on tokens is fat, and giving it up is hard. Because logging prompts is convenient, and not logging them is a discipline. Because lock-in is the easiest moat in the world to build, and the second-easiest to feel ashamed of. Take a look at the apps that promise privacy without promising BYO keys. They are all asking you to trust that the middle of the sandwich is not where the cheese is.
+      </p>
+
+      <h2 class="reveal">A small operational note.</h2>
+      <p class="reveal">
+        BYO keys does not mean "the user is on their own". It means the product takes care of OAuth, key rotation, model routing, cost transparency, and offline fallback — all the things a user actually wants from a layer above the model — without inserting itself into the substrate. It is more work for the builder. It is more value for the user. That trade is the posture.
+      </p>
+
+      <p class="marker reveal">— PrivateForge, Apr 14, 2026</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__colophon">
+        <span>PrivateForge — Issue №<span data-issue>0001</span> · Updated <span data-stamp>Today</span></span>
+        <span>build <span class="build-hash" data-build>0000000</span></span>
+        <span>© <script>document.write(new Date().getFullYear())</script> PrivateForge. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

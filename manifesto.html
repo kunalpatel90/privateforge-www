@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manifesto — PrivateForge</title>
+  <meta name="description" content="Why PrivateForge exists. Your work is not training data." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a href="index.html" class="brand" aria-label="PrivateForge home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" aria-hidden="true">
+          <rect x="24" y="108" width="120" height="22" rx="11" fill="#2563EB"/>
+          <rect x="40" y="80"  width="120" height="22" rx="11" fill="#0D9488"/>
+          <rect x="56" y="52"  width="120" height="22" rx="11" fill="#F59E0B"/>
+          <polygon points="136,34 139,24 142,34 152,31 142,28 139,18 136,28 126,31" fill="#EF4444"/>
+          <polygon points="152,20 154,14 156,20 162,18 156,16 154,10 152,16 146,18" fill="#F97316" fill-opacity="0.85"/>
+          <polygon points="124,40 126,34 128,40 134,38 128,36 126,30 124,36 118,38" fill="#FBBF24" fill-opacity="0.65"/>
+        </svg>
+        <span class="brand__name"><strong>Private</strong><em>Forge</em></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#stations" class="nav-link">Stations</a>
+        <a href="pricing.html"        class="nav-link">Pricing</a>
+        <a href="docs.html"           class="nav-link">Docs</a>
+        <a href="manifesto.html"      class="nav-link" aria-current="page">Manifesto</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+        <a href="https://app.privateforge.ai" class="nav__cta">Open the forge →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="shell longform">
+      <div class="lf-eyebrow reveal">Manifesto · Issue №<span data-issue>0001</span> · <span data-stamp>Today</span></div>
+      <h1 class="reveal">Your work is <em>not</em> training data.</h1>
+
+      <p class="lead reveal">
+        We have spent the last few years watching the most useful tools we have ever had grow up inside other companies' servers. Every prompt, every draft, every half-formed idea — handed over for safe keeping, and quietly used to make a model that competes with the person who handed it over. That is the trade we have agreed to without quite agreeing.
+      </p>
+
+      <p class="has-dropcap reveal">
+        PrivateForge starts from a different premise. The model is a tool. The tool runs in your shop. The work it produces stays where you make it. If you bring a problem to PrivateForge, it does not leave with a copy. It does not phone home with a transcript. It does not become a feature of next year's release. The forge is yours, the bench is yours, the output is yours.
+      </p>
+
+      <h2 class="reveal">Local first, not local only.</h2>
+      <p class="reveal">
+        We are pragmatic. The frontier models live in the cloud, and they are extraordinary at what they do. PrivateForge does not pretend otherwise. What we do, instead, is keep the orchestration on your machine and route requests directly to the providers you already pay — using your keys, on your account, with your terms of service. The middleman disappears. So does the second copy.
+      </p>
+
+      <h2 class="reveal">A workshop, not a vending machine.</h2>
+      <p class="reveal">
+        Most AI products are vending machines. Drop in a prompt, receive an answer, hope it is right. PrivateForge is a workshop. You can see every tool, every source, every step. When the agent reads a page, you see the page. When it writes a file, you see the file appear on disk. When it runs a script, the script runs in front of you. There are no hidden surfaces.
+      </p>
+
+      <h2 class="reveal">One user, not a billion.</h2>
+      <p class="reveal">
+        We are not building software to be used by everyone on the planet. We are building software for the kind of person who wants their work to stay theirs. Researchers, founders, lawyers, doctors, writers, engineers, designers, accountants — anyone whose draft is more valuable to them than to anyone else. If that is you, you are who this is for.
+      </p>
+
+      <h2 class="reveal">What we will not do.</h2>
+      <p class="reveal">
+        We will not train on your data. We will not retain your prompts. We will not log your file system. We will not require an account to do offline work. We will not ship a feature whose only purpose is to lock you in. We will not build a chatbot that pretends to be your friend.
+      </p>
+
+      <h2 class="reveal">What we will do.</h2>
+      <p class="reveal">
+        We will keep the surface small and the seams visible. We will write documentation that respects your time. We will charge a fair price once a year. We will keep the local export working. We will assume you are smarter than the average user, because you are.
+      </p>
+
+      <p class="marker reveal">— PrivateForge, 2026</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__inner">
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="https://app.privateforge.ai">Open the forge</a></li>
+            <li><a href="index.html#stations">Stations</a></li>
+            <li><a href="specs.html">Specs</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Read</h4>
+          <ul>
+            <li><a href="manifesto.html" aria-current="page">Manifesto</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="security.html">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="https://app.privateforge.ai/login">Sign in</a></li>
+            <li><a href="https://app.privateforge.ai/signup">Create account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="mailto:hello@privateforge.ai">hello@privateforge.ai</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__colophon">
+        <span>PrivateForge — Issue №<span data-issue>0001</span> · Updated <span data-stamp>Today</span></span>
+        <span>build <span class="build-hash" data-build>0000000</span></span>
+        <span>© <script>document.write(new Date().getFullYear())</script> PrivateForge. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js" defer></script>
+</body>
+</html>
